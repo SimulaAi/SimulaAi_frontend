@@ -23,7 +23,7 @@ export const Login = () => {
                 <div id="passwordHelp" className="form-text">   DIGITE SUA SENHA:</div>
                 <input type="password" className="form-control" placeholder="*************" />
               </div>
-              <button type="submit" className="btn btn-warning"><b>ENTRAR</b></button>
+              <button className="btn btn-warning"><b>ENTRAR</b></button>
             </form>
           </div>
         </div>
