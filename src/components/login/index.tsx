@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import Router from 'next/router'
 import api from '../../services/api'
+import { setUserToken } from '../../utils/authentication'
 import { Container } from '../container'
 import * as Styles from './styles'
 
@@ -17,8 +19,8 @@ export const Login = () => {
     if (data.error) {
       setLoginError(data.error)
     }
-
-    console.log(data)
+    setUserToken({ maxAge: 36000, value: data.token })
+    await Router.push('/')
   }
 
   return (
