@@ -13,7 +13,6 @@ export const Login = () => {
       <div className="container">
         <div id="login">
           <div id="login-form">
-            <form action="" method="post">
               <div className="mb-3">
                 <div id="emailHelp" className="form-text">   DIGITE SEU EMAIL:</div>
                 <input type="email" className="form-control" aria-describedby="emailHelp"
@@ -23,8 +22,7 @@ export const Login = () => {
                 <div id="passwordHelp" className="form-text">   DIGITE SUA SENHA:</div>
                 <input type="password" className="form-control" placeholder="*************" />
               </div>
-              <button type="submit" className="btn btn-warning"><b>ENTRAR</b></button>
-            </form>
+              <button className="btn btn-warning"><b>ENTRAR</b></button>
           </div>
         </div>
       </div>
