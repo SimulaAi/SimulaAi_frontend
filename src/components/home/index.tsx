@@ -13,7 +13,7 @@ export const Login = () => {
       <div className="container">
         <div id="login">
           <div id="login-form">
-            <form action="" method="post">
+            <form action="/" method="post">
               <div className="mb-3">
                 <div id="emailHelp" className="form-text">   DIGITE SEU EMAIL:</div>
                 <input type="email" className="form-control" aria-describedby="emailHelp"
