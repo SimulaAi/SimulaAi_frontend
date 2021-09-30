@@ -1,4 +1,4 @@
-export const HomePage = () => {
+export const Login = () => {
   return (
     <>
       <div className="header-login">
@@ -13,7 +13,7 @@ export const HomePage = () => {
       <div className="container">
         <div id="login">
           <div id="login-form">
-            <form action="/submitLogin" method="post">
+            <form action="" method="post">
               <div className="mb-3">
                 <div id="emailHelp" className="form-text">   DIGITE SEU EMAIL:</div>
                 <input type="email" className="form-control" aria-describedby="emailHelp"
