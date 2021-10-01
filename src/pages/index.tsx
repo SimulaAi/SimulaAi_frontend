@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
-import Dashboard from '../components/dashboard'
-import { Login } from '../components/login'
+import { LoginTemplate } from '../templates/login-template'
+import { DashboardTempalte } from '../templates/login-template/dashboard-template'
 import { isLogged } from '../utils/authentication'
 
 const Home: NextPage = () => {
   const isAuthenticated = isLogged()
-  console.log('isAuthenticated?:', isAuthenticated)
-  return !isAuthenticated ? <Login /> : <Dashboard />
+  console.log(isAuthenticated)
+  return isAuthenticated ? <DashboardTempalte /> : <LoginTemplate />
 }
 
 export default Home
