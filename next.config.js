@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  env: {}
+  env: {
+    API: process.env.API
+  }
 }
