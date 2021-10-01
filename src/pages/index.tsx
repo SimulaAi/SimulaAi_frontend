@@ -1,10 +1,9 @@
-import { LoginTemplate } from '../templates/login-template'
 import { DashboardTemplate } from '../templates/dashboard-template'
+import { LoginTemplate } from '../templates/login-template'
 import { isLogged } from '../utils/authentication'
-
-const isServerRendering = () => typeof window === 'undefined'
+import NoSSR from 'react-no-ssr'
 
 export default function Home () {
   const isAuthenticated = isLogged()
-  return !isServerRendering() && !isAuthenticated ? <LoginTemplate /> : <DashboardTemplate />
+  return <NoSSR>{!isAuthenticated ? <LoginTemplate /> : <DashboardTemplate />}</NoSSR>
 }
