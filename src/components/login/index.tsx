@@ -15,9 +15,9 @@ export const Login = () => {
       email: email,
       senha: password
     })
-
+    console.log(data)
     if (data.error) {
-      setLoginError(data.error)
+      return setLoginError(data.error)
     }
     setUserToken({ maxAge: 36000, value: data.token })
     await Router.push('/')

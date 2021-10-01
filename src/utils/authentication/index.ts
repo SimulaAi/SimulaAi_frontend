@@ -13,7 +13,6 @@ export const setUserToken = (values: setUserTokenProps) => {
     maxAge,
     path: '/'
   })
-  console.log('token salvo:', value)
 }
 
 export const isLogged = () => {
