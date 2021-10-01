@@ -1,11 +1,10 @@
-import type { NextPage } from 'next'
 import { LoginTemplate } from '../templates/login-template'
 import { DashboardTemplate } from '../templates/dashboard-template'
 import { isLogged } from '../utils/authentication'
 
-const Home: NextPage = () => {
-  const isAuthenticated = isLogged()
-  return !isAuthenticated ? <LoginTemplate /> : <DashboardTemplate />
-}
+const isServerRendering = () => typeof window === 'undefined'
 
-export default Home
+export default function Home () {
+  const isAuthenticated = isLogged()
+  return !isServerRendering() && !isAuthenticated ? <LoginTemplate /> : <DashboardTemplate />
+}
