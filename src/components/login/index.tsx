@@ -5,6 +5,7 @@ import { setUserToken } from '../../utils/authentication'
 import { Container } from '../container'
 import * as Styles from './styles'
 import { Button } from '../button/styles'
+import { Typography } from '../commom/Typography/styles'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
@@ -28,12 +29,12 @@ export const Login = () => {
     <Styles.Wrapper>
       <Styles.Header>
         <Container>
-          <h1>Login</h1>
-          <p>Entra com sua conta</p>
+          <Typography variant='h3' >Login</Typography>
+          <Typography>Entra com sua conta</Typography>
         </Container>
       </Styles.Header>
       <Container>
-        <Styles.LoginForm id="login">
+        <Styles.LoginForm>
           <Styles.LoginContent id="login-form">
 
             <Styles.Label>DIGITE SEU EMAIL:</Styles.Label>
@@ -47,7 +48,11 @@ export const Login = () => {
             <Button
               onClick={handleSubmit}
               variant='contained'
-              style={{ width: '100%', height: '50px', borderRadius: '25px' }}>ENTRAR
+              style={{
+                width: '100%',
+                height: '50px',
+                marginTop: '25px'
+              }}>ENTRAR
             </Button>
           </Styles.LoginContent>
         </Styles.LoginForm>

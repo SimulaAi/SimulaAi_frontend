@@ -24,7 +24,7 @@ export default createGlobalStyle`
   color: white;
   height: 200px;
   text-align: center;
-  background: linear-gradient(to right, #ffb859, #ffb158, #ffa957, #ffa258, #ff9b58, #ff9458, #ff8e58, #ff8758, #ff7f58, #ff7758, #ff6e59, #ff655a);
+  background-color: #3965E6;
   }
 
   .header-login h1 {
