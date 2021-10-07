@@ -29,7 +29,6 @@ export const Label = styled.div`
   letter-spacing: .08rem;
   color: rgb(145, 143, 143);
 `
-export const Button = styled.button``
 
 export const Input = styled.input`
 margin-bottom: 15px;

@@ -5,8 +5,6 @@ export default createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   a {
@@ -47,16 +45,6 @@ export default createGlobalStyle`
 #login-form input {
   border-radius: 25px;
   background-color: #ECECEC;
-}
-
-#login-form .btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited .btn-warning:focus{
-  margin-top: 30px;
-  color: white;
-  height: 50px;
-  border-radius: 25px;
-  width: 100%;
-  background: #FA8238;
-  border-color: #FA8238;
 }
 
 #login .form-text {

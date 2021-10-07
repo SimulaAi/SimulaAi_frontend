@@ -4,6 +4,7 @@ import api from '../../services/api'
 import { setUserToken } from '../../utils/authentication'
 import { Container } from '../container'
 import * as Styles from './styles'
+import { Button } from '../button/styles'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
@@ -27,8 +28,8 @@ export const Login = () => {
     <Styles.Wrapper>
       <Styles.Header>
         <Container>
-            <h1>Login</h1>
-            <p>Entra com sua conta</p>
+          <h1>Login</h1>
+          <p>Entra com sua conta</p>
         </Container>
       </Styles.Header>
       <Container>
@@ -36,14 +37,18 @@ export const Login = () => {
           <Styles.LoginContent id="login-form">
 
             <Styles.Label>DIGITE SEU EMAIL:</Styles.Label>
-              <Styles.Input onChange={({ target }) => setEmail(target.value)} type="email" className="form-control" placeholder="example@mail.com" alt="campo de login"/>
+            <Styles.Input onChange={({ target }) => setEmail(target.value)} type="email" className="form-control" placeholder="example@mail.com" alt="campo de login" />
 
             <Styles.Label>DIGITE SUA SENHA:</Styles.Label>
-              <Styles.Input onChange={({ target }) => setPassword(target.value)} type="password" className="form-control" placeholder="*************" alt="campo da senha"/>
+            <Styles.Input onChange={({ target }) => setPassword(target.value)} type="password" className="form-control" placeholder="*************" alt="campo da senha" />
 
-             {loginError && <Styles.LoginError>{loginError}</Styles.LoginError>}
+            {loginError && <Styles.LoginError>{loginError}</Styles.LoginError>}
 
-            <Styles.Button onClick={handleSubmit} className="btn btn-warning"><b>ENTRAR</b></Styles.Button>
+            <Button
+              onClick={handleSubmit}
+              variant='contained'
+              style={{ width: '100%', height: '50px', borderRadius: '25px' }}>ENTRAR
+            </Button>
           </Styles.LoginContent>
         </Styles.LoginForm>
       </Container>
