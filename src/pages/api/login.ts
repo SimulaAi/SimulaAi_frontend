@@ -13,11 +13,7 @@ export default function handler (
   res: NextApiResponse<LoginToken | LoginError>
 ) {
   setTimeout(() => {
-    if (req.body.email === 'dev@mail.com' && req.body.senha === '123456789') {
-      return res.status(200).json({ token: 'fake-token-for-while' })
-    } else {
-      return res.json({ error: 'dados inválidos' })
-    }
+    return res.status(200).json({ token: 'fake-token-for-while' })
   }, 1000)
 }
 
