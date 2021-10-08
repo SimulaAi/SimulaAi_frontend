@@ -1,5 +1,5 @@
 import { InstructionsTemplate } from '../templates/instrucoes-template'
 
-export default function Instructions () {
-  return (<InstructionsTemplate />)
+export default function InstructionsPage () {
+  return <InstructionsTemplate />
 }

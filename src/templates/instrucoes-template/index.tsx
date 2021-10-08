@@ -1,3 +1,3 @@
-export const InstructionsTemplate = () => {
-  return (<h1>teste</h1>)
-}
+import { Instructions } from '../../components/instructions'
+
+export const InstructionsTemplate = () => <Instructions />
