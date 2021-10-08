@@ -1,3 +1,4 @@
+import router from 'next/router'
 import { Button } from '../button/styles'
 import { Container } from '../container'
 import * as Styles from './styles'
@@ -15,7 +16,9 @@ export const Instructions = () => {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere nemo debitis esse placeat, ipsa iure facilis ab dolores maiores aut neque corporis maxime omnis ipsum, aliquid consectetur at mollitia quo!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quis minus ad eos pariatur fugiat, ullam sequi numquam voluptas sint consectetur itaque explicabo. Unde doloribus provident veniam labore exercitationem reiciendis!</p>
           <Styles.Confirm>
-            <Button variant='contained'>Continuar</Button>
+            <Button variant='contained' onClick={async () => await router.push('/')}>
+              Continuar
+            </Button>
           </Styles.Confirm>
         </Container>
       </Styles.Content>

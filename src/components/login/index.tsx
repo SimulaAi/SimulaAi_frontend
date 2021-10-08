@@ -27,7 +27,7 @@ export const Login = () => {
       }
       setUserToken({ maxAge: 36000, value: data.token })
       setLoading(false)
-      await Router.push('/')
+      await Router.push('/instrucoes')
     } catch (error) {
       setLoading(false)
       console.error(error)
