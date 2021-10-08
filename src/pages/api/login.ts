@@ -12,9 +12,17 @@ export default function handler (
   req: NextApiRequest,
   res: NextApiResponse<LoginToken | LoginError>
 ) {
-  if (req.body.email === 'dev@mail.com' && req.body.senha === '123456789') {
-    return res.status(200).json({ token: 'fake-token-for-while' })
-  } else {
-    return res.json({ error: 'dados inválidos' })
+  setTimeout(() => {
+    if (req.body.email === 'dev@mail.com' && req.body.senha === '123456789') {
+      return res.status(200).json({ token: 'fake-token-for-while' })
+    } else {
+      return res.json({ error: 'dados inválidos' })
+    }
+  }, 1000)
+}
+
+export const config = {
+  api: {
+    externalResolver: true
   }
 }
