@@ -8,7 +8,7 @@ interface LoadingProps {
 export const Loading = ({ isOpen }: LoadingProps) => {
   return (
     <Styles.Backdrop open={isOpen}>
-      <CircularProgress color='primary'/>
+      <CircularProgress style={{ color: 'white' }}/>
     </Styles.Backdrop>
   )
 }
