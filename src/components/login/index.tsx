@@ -6,23 +6,32 @@ import { Container } from '../container'
 import * as Styles from './styles'
 import { Button } from '../button/styles'
 import { Typography } from '../commom/Typography/styles'
+import { Loading } from '../commom/Loading'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loginError, setLoginError] = useState()
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async () => {
-    const { data } = await api.post('login', {
-      email: email,
-      senha: password
-    })
-    console.log(data)
-    if (data.error) {
-      return setLoginError(data.error)
+    try {
+      setLoading(true)
+      const { data } = await api.post('login', {
+        email: email,
+        senha: password
+      })
+      if (data.error) {
+        setLoading(false)
+        return setLoginError(data.error)
+      }
+      setUserToken({ maxAge: 36000, value: data.token })
+      setLoading(false)
+      await Router.push('/')
+    } catch (error) {
+      setLoading(false)
+      console.error(error)
     }
-    setUserToken({ maxAge: 36000, value: data.token })
-    await Router.push('/')
   }
 
   return (
@@ -54,6 +63,7 @@ export const Login = () => {
                 marginTop: '25px'
               }}>ENTRAR
             </Button>
+            <Loading isOpen={loading} />
           </Styles.LoginContent>
         </Styles.LoginForm>
       </Container>
