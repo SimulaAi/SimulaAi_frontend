@@ -1,4 +1,5 @@
 import router from 'next/router'
+import { UserLogout } from '../../utils/authentication'
 import * as Icons from '../icons/styles'
 import * as Styles from './styles'
 
@@ -30,7 +31,10 @@ export const SidebarItems = () => {
         </Styles.Item>
 
         {/* logout */}
-        <Styles.Item onClick={async () => await goTo('/')}>
+        <Styles.Item onClick={async () => {
+          UserLogout()
+          await goTo('/')
+        }}>
           <Icons.PowerDownIcon />
         </Styles.Item>
 
