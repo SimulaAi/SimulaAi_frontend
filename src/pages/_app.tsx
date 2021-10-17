@@ -9,7 +9,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/logo.png" />
+        <link rel="shortcut icon" href="/png/simula-ai-logo.png" />
         <title>Simula Ai</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
