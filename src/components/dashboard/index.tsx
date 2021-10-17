@@ -1,19 +1,13 @@
-import Router from 'next/router'
-import { UserLogout } from '../../utils/authentication'
 import { Container } from '../container'
 import * as Styles from './styles'
 
 const Dashboard = () => {
-  const handleLogout = async () => {
-    UserLogout()
-    await Router.push('/')
-  }
   return (
     <Styles.Wrapper>
       <Container>
         <Styles.Content>
-        <h1 style={{ marginBottom: '80px' }}>ainda em desenvolvimento!</h1>
-        <button onClick={handleLogout} className="btn btn-danger"><h1>sair</h1></button>
+        <h1 style={{ marginBottom: '80px' }}>HOME PAGE</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In unde beatae laboriosam reprehenderit iure amet aliquam vero reiciendis. Praesentium repellat, aut suscipit saepe numquam blanditiis quas nihil atque autem expedita?</p>
         </Styles.Content>
       </Container>
     </Styles.Wrapper>
