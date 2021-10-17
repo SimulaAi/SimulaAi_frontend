@@ -1,6 +1,5 @@
 import {
   AppBar as MuiAppBar,
-  Container as MuiContainer,
   Toolbar as MuiToolBar
 } from '@mui/material'
 import styled from 'styled-components'
@@ -13,12 +12,17 @@ export const AppBar = styled(MuiAppBar)`
 export const Toolbar = styled(MuiToolBar)`
 `
 
-export const Container = styled(MuiContainer)``
+export const Container = styled.div`
+  width: 100%;
+  margin-left: 85px;
+`
 
 export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &&& {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `
 
 export const UserInfo = styled.div`
