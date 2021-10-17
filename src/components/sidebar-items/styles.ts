@@ -14,6 +14,7 @@ export const Content = styled.div`
 export const Item = styled.div`
   width: 80px;
   padding: 20px 10px;
+  cursor: pointer;
 `
 
 export const ShutDown = styled.div`
