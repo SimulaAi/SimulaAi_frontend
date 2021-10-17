@@ -11,26 +11,23 @@ import { Loading } from '../commom/Loading'
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [loginError, setLoginError] = useState()
+  const [loginError, setLoginError] = useState<any>()
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async () => {
     try {
       setLoading(true)
       const { data } = await api.post('login', {
-        email: email,
+        email,
         senha: password
       })
-      if (data.error) {
-        setLoading(false)
-        return setLoginError(data.error)
-      }
       setUserToken({ maxAge: 36000, value: data.token })
       setLoading(false)
       await Router.push('/instrucoes')
-    } catch (error) {
+    } catch (error: any) {
       setLoading(false)
-      console.error(error)
+      console.log(error)
+      setLoginError('email ou senha inválida..')
     }
   }
 
@@ -47,10 +44,20 @@ export const Login = () => {
           <Styles.LoginContent id="login-form">
 
             <Styles.Label>DIGITE SEU EMAIL:</Styles.Label>
-            <Styles.Input onChange={({ target }) => setEmail(target.value)} type="email" className="form-control" placeholder="example@mail.com" alt="campo de login" />
+            <Styles.Input onChange={({ target }) =>
+              setEmail(target.value)} type="email"
+              className="form-control"
+              placeholder="example@mail.com"
+              alt="campo de login"
+            />
 
             <Styles.Label>DIGITE SUA SENHA:</Styles.Label>
-            <Styles.Input onChange={({ target }) => setPassword(target.value)} type="password" className="form-control" placeholder="*************" alt="campo da senha" />
+            <Styles.Input onChange={({ target }) =>
+              setPassword(target.value)} type="password"
+              className="form-control"
+              placeholder="*************"
+              alt="campo da senha"
+            />
 
             {loginError && <Styles.LoginError>{loginError}</Styles.LoginError>}
 
