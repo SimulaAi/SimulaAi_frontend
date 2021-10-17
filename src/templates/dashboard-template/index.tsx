@@ -1,3 +1,10 @@
 import Dashboard from '../../components/dashboard'
+import { Layout } from '../layout'
 
-export const DashboardTemplate = () => <Dashboard />
+export const DashboardTemplate = () => {
+  return (
+    <Layout>
+      <Dashboard />
+    </Layout>
+  )
+}
