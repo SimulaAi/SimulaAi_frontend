@@ -15,7 +15,7 @@ export const SidebarItems = () => {
         </Styles.Item>
 
         {/* game icon */}
-        <Styles.Item onClick={async () => await goTo('/')}>
+        <Styles.Item onClick={async () => await goTo('/jogos')}>
           <Icons.GameController />
         </Styles.Item>
 
@@ -25,7 +25,7 @@ export const SidebarItems = () => {
         </Styles.Item>
 
         {/* buy credits */}
-        <Styles.Item onClick={async () => await goTo('/')}>
+        <Styles.Item onClick={async () => await goTo('/loja')}>
           <Icons.ShoppingIcon />
         </Styles.Item>
 

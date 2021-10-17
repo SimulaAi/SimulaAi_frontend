@@ -1,4 +1,4 @@
-import { ShoppingTemplate } from '../templates/shopping'
+import { ShoppingTemplate } from '../templates/shopping-template'
 
 const ShoppingPage = () => <ShoppingTemplate />
 
