@@ -1,6 +1,6 @@
+import { Container } from '@mui/material'
 import router from 'next/router'
 import { Button } from '../button/styles'
-import { Container } from '../container'
 import * as Styles from './styles'
 
 export const Instructions = () => {

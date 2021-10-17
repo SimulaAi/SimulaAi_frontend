@@ -1,4 +1,4 @@
-import { Container } from '../container'
+import { Container } from '@mui/material'
 import { Header } from '../header/indext'
 import Sidebar from '../sidebar'
 

@@ -2,11 +2,11 @@ import { useState } from 'react'
 import Router from 'next/router'
 import api from '../../services/api'
 import { setUserToken } from '../../utils/authentication'
-import { Container } from '../container'
 import * as Styles from './styles'
 import { Button } from '../button/styles'
 import { Typography } from '../commom/Typography/styles'
 import { Loading } from '../commom/Loading'
+import { Container } from '@mui/material'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
@@ -34,10 +34,8 @@ export const Login = () => {
   return (
     <Styles.Wrapper>
       <Styles.Header>
-        <Container>
           <Typography variant='h3' >Login</Typography>
           <Typography>Entra com sua conta</Typography>
-        </Container>
       </Styles.Header>
       <Container>
         <Styles.LoginForm>
