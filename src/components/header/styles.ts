@@ -33,4 +33,6 @@ export const UserDescription = styled.div`
   margin-left: 20px;
 `
 
-export const Credits = styled.div``
+export const Credits = styled.div`
+  cursor: pointer;
+`
