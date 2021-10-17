@@ -1,6 +1,6 @@
-import { Container } from '../../components/container'
-import { Header } from '../../components/header/indext'
-import Sidebar from '../../components/sidebar'
+import { Container } from '../container'
+import { Header } from '../header/indext'
+import Sidebar from '../sidebar'
 
 interface SidebarProps {
   children?: React.ReactNode
