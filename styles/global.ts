@@ -5,6 +5,7 @@ export default createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    font-weight: 500;
   }
 
   a {
