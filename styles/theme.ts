@@ -7,7 +7,8 @@ const theme = {
     text: '#FFFFFF'
   },
   font: {
-    normal: '1.2rem'
+    normal: '1.2rem',
+    icon_font: '2.5rem'
   },
   spacing: {
     normal: '1rem'
