@@ -21,4 +21,8 @@ export const Toolbar = styled(MuiToolBar)``
 export const Drawer = styled(MuiDrawer)`
   width: 150px;
   flex-shrink: 0;
+
+  @media(max-width: 800px){
+    width: 81px;
+  }
 `
