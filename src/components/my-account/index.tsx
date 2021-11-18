@@ -1,4 +1,5 @@
 import { Edit } from '@mui/icons-material'
+import { useState } from 'react'
 import { TextField } from '@mui/material'
 import { Button } from '../button/styles'
 import * as Styles from './styles'
@@ -11,6 +12,11 @@ const inputProps = {
 }
 
 export const MyAccount = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
+  console.log(email, password, confirmPassword)
   return (
     <Styles.Wrapper>
       <Styles.Square>
@@ -18,7 +24,10 @@ export const MyAccount = () => {
           <Styles.Title>DADOS DO PERFIL</Styles.Title>
 
           <TextField
-            label=' '
+            onChange={({ target }) =>
+              setEmail(target.value)}
+            type="email"
+            label='email'
             variant='outlined'
             value='email@mail.com'
             margin='normal'
@@ -26,17 +35,25 @@ export const MyAccount = () => {
             size='small'
           />
 
-          <TextField label=' '
+          <TextField
+            onChange={({ target }) =>
+              setPassword(target.value)}
+            type="text"
+            label='senha'
             variant='outlined'
-            value='***********'
+            placeholder='***********'
             margin='normal'
             InputProps={inputProps}
             size='small'
           />
 
-          <TextField label=' '
+          <TextField
+            onChange={({ target }) =>
+              setConfirmPassword(target.value)}
+            label='confirmar senha'
+            type="text"
             variant='outlined'
-            value='***********'
+            placeholder='***********'
             margin='normal'
             size='small'
             InputProps={{

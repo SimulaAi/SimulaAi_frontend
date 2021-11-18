@@ -19,7 +19,7 @@ export const Square = styled('div')({
   boxShadow: '0 7px 3px #686465'
 })
 
-export const Form = styled('div')({
+export const Form = styled('form')({
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'center'
