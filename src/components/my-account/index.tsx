@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { TextField } from '@mui/material'
 import { Button } from '../button/styles'
 import * as Styles from './styles'
+import { FormEvent } from 'react-transition-group/node_modules/@types/react'
 
 const inputProps = {
   endAdornment: (
@@ -12,15 +13,18 @@ const inputProps = {
 }
 
 export const MyAccount = () => {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('email@mail.com')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
-  console.log(email, password, confirmPassword)
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault()
+    console.log(email, password, confirmPassword)
+  }
   return (
     <Styles.Wrapper>
       <Styles.Square>
-        <Styles.Form>
+        <Styles.Form onSubmit={handleSubmit}>
           <Styles.Title>DADOS DO PERFIL</Styles.Title>
 
           <TextField
@@ -61,7 +65,9 @@ export const MyAccount = () => {
             }}
           />
 
-          <Button variant='contained'
+          <Button
+            variant='contained'
+            type='submit'
             sx={{
               marginTop: '10px'
             }}>

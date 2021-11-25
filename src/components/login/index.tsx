@@ -58,7 +58,7 @@ export const Login = () => {
             />
 
             {loginError && <Styles.LoginError>{loginError}</Styles.LoginError>}
-
+            {loginError && <Styles.LoginError>{loginError}</Styles.LoginError>}
             <Button
               onClick={handleSubmit}
               variant='contained'
